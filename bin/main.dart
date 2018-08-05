@@ -13,6 +13,7 @@ dice() {
 }
 
 main() {
+  Stopwatch stopwatch = new Stopwatch()..start();
   int noOfPlayers;
   print("Enter Number Of players");
   noOfPlayers = 2;
@@ -26,11 +27,11 @@ main() {
     jina = stdin.readLineSync();
     name.add(jina);
   }
-  print("shall the game begin?");
+  print("shall the game begin?[yes/no]");
   String round = stdin.readLineSync();
   String turn = "yes";
 
-  while (round == "yes") {
+  while (round.toLowerCase() == "yes") {
     print("tuko while");
     if (turn != null) {
       for (int i = 0; i < noOfPlayers; i++) {
@@ -46,5 +47,7 @@ main() {
       }
     }
   }
+  stopwatch.stop();
   print("good game");
+  print("Finshed in ${stopwatch.elapsedMicroseconds/6e+7} Minutes");
 }
