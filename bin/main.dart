@@ -16,13 +16,12 @@ main() {
   Stopwatch stopwatch = new Stopwatch()..start();
   int noOfPlayers;
   print("Enter Number Of players");
-  noOfPlayers = 2;
-//  noOfPlayers = stdin.readByteSync();
-  print(noOfPlayers);
+  noOfPlayers = int.parse(stdin.readLineSync());
+  print("Total number of players are:$noOfPlayers");
 
   List<String> name = new List<String>();
   for (int i = 0; i < noOfPlayers; i++) {
-    print("Enter your name player $i");
+    print("Enter your name player $i ");
     String jina;
     jina = stdin.readLineSync();
     name.add(jina);
