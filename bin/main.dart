@@ -2,13 +2,14 @@ import 'dart:io';
 import 'dart:math' show Random;
 
 dice() {
-  int D1 = nextInt(5);
-  int D2 = 3;
-  int DS = D1 + D2;
+  var D1 = new Random();
+  int dice1 = D1.nextInt(6);
+  int dice2 = D1.nextInt(6);
+  int sumOfDice = dice1 + dice2;
 
-  print("the value of the first dice is: $D1");
-  print("the value of the second dice is: $D2");
-  print("The sum of dice is : $DS");
+  print("the value of the first dice is: $dice1");
+  print("the value of the second dice is: $dice2");
+  print("The sum of dice is : $sumOfDice");
 }
 
 main() {
